@@ -21,12 +21,12 @@ import java.util.List;
 public class Sort03 {
 
     public static void main(String[] args) {
-//        int arr[] = {7, 5, 3, 2, 4,3,6,10,123,0};  8S
-        List<Integer> list = new ArrayList<>();
-        for (int i = 0; i < 9999; i++) {
-            list.add((int)(Math.random()*9999)+1);
-        }
-        Integer[] arr = list.toArray(new Integer[]{});
+        int arr[] = {7, 5, 3, 2, 4,3,6,10,123,0};
+//        List<Integer> list = new ArrayList<>();
+//        for (int i = 0; i < 9999; i++) {
+//            list.add((int)(Math.random()*9999)+1);
+//        }
+//        Integer[] arr = list.toArray(new Integer[]{});
         Instant fromDate = Instant.now();
         for (int i = 1; i < arr.length; i++) {
             //外层循环，从第二个开始比较
