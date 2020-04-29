@@ -1,5 +1,7 @@
 package job.seek.java8;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.BinaryOperator;
 
 public class Java8 {
@@ -12,5 +14,7 @@ public class Java8 {
             return x + y;
         };
         System.out.println(cal.apply(33L,2L));
+
+        List<String> list = new ArrayList<String>();
     }
 }
