@@ -1,4 +1,4 @@
-package job.seek.io;
+package job.seek.io.byteIO;
 
 import java.io.File;
 import java.io.FileInputStream;
