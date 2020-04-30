@@ -18,3 +18,4 @@ public class FunctionalInterface {
         System.out.println(money.apply(12,74));
     }
 }
+
