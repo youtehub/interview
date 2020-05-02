@@ -3,6 +3,8 @@ package job.seek.io.byteIO;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 读文件
@@ -24,5 +26,12 @@ public class Demo8 {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        List list = new ArrayList<>();
+        list.add(33);
+        list.add("2343");
+
+        Integer[] aa = {1,3};
+        char[] chars = {'3'};
+
     }
 }
