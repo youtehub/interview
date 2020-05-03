@@ -1,5 +1,7 @@
 package job.seek.io.byteIO;
 
+import org.junit.Test;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -33,5 +35,15 @@ public class Demo8 {
         Integer[] aa = {1,3};
         char[] chars = {'3'};
 
+    }
+
+    @Test
+    public void loadClass(){
+        try {
+            Class<?> aClass = Class.forName("job.seek.io.byteIO.Demo7");
+            Class<?> bClass = Class.forName("job.seek.io.byteIO.Demo7");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }
