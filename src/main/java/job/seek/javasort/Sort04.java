@@ -67,9 +67,10 @@ public class Sort04 {
         int arr[] = {6, 5, 3, 2, 4, 14};
         //数组分区
         for (int i = arr.length / 2; i > 0; i /= 2) {
-            //冒泡排序机制
+            //仿冒泡排序机制
             for (int j = i; j < arr.length; j++) {
                 //这里i代表当前分区数组的起始位置
+                //k - i >= 0 为了保证不越界
                 for (int k = j; k > 0 && k - i >= 0; k -= i) {
                     if (arr[k] < arr[k - 1]) {
                         int temp = arr[k - 1];
@@ -80,6 +81,11 @@ public class Sort04 {
             }
         }
         System.out.println(Arrays.toString(arr));
+    }
+
+    @Test
+    public void sort02() {
+        System.out.println(1/2);
     }
 
 }

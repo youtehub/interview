@@ -29,7 +29,7 @@ public class Sort02 {
         }
         Integer[] arr = list.toArray(new Integer[]{});
         Instant fromDate = Instant.now();
-        //选择
+        //选择，记录所有循环的次数
         for (int i = 0; i < arr.length; i++) {
             //默认第一个是最小值
             int min = arr[i];
