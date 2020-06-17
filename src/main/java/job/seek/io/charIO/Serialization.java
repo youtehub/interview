@@ -1,4 +1,4 @@
-package job.seek.io.charIO.byteIO;
+package job.seek.io.charIO;
 
 import java.io.*;
 import java.util.ArrayList;
