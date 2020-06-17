@@ -4,7 +4,9 @@ import org.junit.Test;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * 希尔排序
@@ -59,6 +61,8 @@ public class Sort04 {
 //        StringJoiner joiner = new StringJoiner(",");
 //        Arrays.stream(arr).mapToObj(String::valueOf).forEach(joiner::add);
 //        System.out.println(joiner.toString());
+
+        List list = new ArrayList<>();
 
     }
 

@@ -16,6 +16,9 @@ public class FunctionalInterface {
     public static void main(String[] args) {
         BinaryOperator<Integer> money = (x,y) -> x+y;
         System.out.println(money.apply(12,74));
+
+        String[] arr = {"sdf","ddds","5645"};
+        System.out.println(arr[0]);
     }
 }
 

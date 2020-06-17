@@ -1,10 +1,12 @@
 package job.seek.java8;
 
 import org.junit.Test;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.LinkedHashMap;
 
 /**
  * Lambda表达式
@@ -72,5 +74,29 @@ public class FileInput {
                 }
             }
         }
+    }
+
+    @Test
+    public void testLinkedHashMap() {
+        LinkedHashMap map = new LinkedHashMap<>(16);
+        map.put(1, "weather");
+        String word = (String) map.get(1);
+        System.out.println(word);
+    }
+
+    @Test
+    public void testBasicType() {
+        byte bytes = 127;
+        int sum = 12 + bytes;
+        float sum1 = sum;
+        double d = sum1;
+        char c = 'c';
+        int i = c;
+        Double D1 = 12.01;
+        //自动装箱
+        Integer total = 99;
+        //自动拆箱
+        int totalprim = total;
+        System.out.println(sum);
     }
 }
