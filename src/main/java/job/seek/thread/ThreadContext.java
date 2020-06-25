@@ -6,12 +6,7 @@ package job.seek.thread;
 public class ThreadContext {
     private String userId;
     private Long transactionId;
-    private static ThreadLocal threadLocal = new ThreadLocal() {
-        @Override
-        protected ThreadContext initialValue() {
-            return new ThreadContext();
-        }
-    };
+    private static ThreadLocal threadLocal = ThreadLocal.withInitial(() -> new ThreadContext());
 
     public static ThreadContext get() {
         return (ThreadContext) threadLocal.get();
