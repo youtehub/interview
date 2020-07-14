@@ -43,3 +43,9 @@ public class Thread01 {
         }
     }
 }
+
+class Test{
+    public static void main(String[] args) {
+        Thread01 thread01 = new Thread01();
+    }
+}
