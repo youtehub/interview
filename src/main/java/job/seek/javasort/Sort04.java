@@ -2,6 +2,7 @@ package job.seek.javasort;
 
 import org.junit.Test;
 
+import java.io.IOException;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
@@ -64,9 +65,10 @@ public class Sort04 {
 
         List list = new ArrayList<>();
 
+        Sort04 sort04 = new Sort04();
+        sort04.sort();
     }
 
-    @Test
     public void sort() {
         int arr[] = {7, 5, 3, 2, 4, 3, 6, 10, 123, 0};
         for (int i = arr.length / 2; i > 0; i /= 2) {
