@@ -1,5 +1,7 @@
 package job.seek.javasort;
 
+import org.junit.Test;
+
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.Arrays;
@@ -43,6 +45,21 @@ public class Sort01 {
         System.out.println("耗费时间minutes：" + minutes);
         System.out.println(Arrays.toString(arr));
 //        Arrays.stream(arr).forEach(System.out::println);
+    }
+
+    @Test
+    public void sort01() {
+        Integer[] arr = {54, 11, 2, 8, 5, 21};
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length-i-1; j++) {
+                if(arr[j] > arr[j+1]){
+                    int temp = arr[j];
+                    arr[j]=arr[j+1];
+                    arr[j+1] = temp;
+                }
+            }
+        }
+        System.out.println(Arrays.toString(arr));
     }
 
 }

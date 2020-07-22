@@ -1,5 +1,7 @@
 package job.seek.javasort;
 
+import org.junit.Test;
+
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
@@ -25,7 +27,7 @@ public class Sort02 {
 //        int arr[] = {6, 5, 3, 2, 4};
         List<Integer> list = new ArrayList<>();
         for (int i = 0; i < 9999; i++) {
-            list.add((int)(Math.random()*9999)+1);
+            list.add((int) (Math.random() * 9999) + 1);
         }
         Integer[] arr = list.toArray(new Integer[]{});
         Instant fromDate = Instant.now();
@@ -37,10 +39,10 @@ public class Sort02 {
             int index = i;
             //通过与后面的数据进行比较得出，最小值和下标
             for (int j = i + 1; j < arr.length; j++) {
-               if(min > arr[j]){
-                   min = arr[j];
-                   index = j;
-               }
+                if (min > arr[j]) {
+                    min = arr[j];
+                    index = j;
+                }
             }
             //然后将最小值与本次循环的，开始值交换
             int temp = arr[i];
@@ -56,6 +58,25 @@ public class Sort02 {
         System.out.println("耗费时间minutes：" + minutes);
         System.out.println(Arrays.toString(arr));
 //        Arrays.stream(arr).forEach(System.out::println);
+    }
+
+    @Test
+    public void sort02() {
+        Integer[] arr = {54, 11, 2, 8, 5, 21};
+        for (int i = 0; i < arr.length; i++) {
+            int min = arr[i];
+            int index = i;
+            for (int j = i + 1; j < arr.length; j++) {
+                if (min > arr[j]) {
+                    min = arr[j];
+                    index = j;
+                }
+            }
+            int temp = arr[i];
+            arr[i] = min;
+            arr[index] = temp;
+        }
+        System.out.println(Arrays.toString(arr));
     }
 
 }

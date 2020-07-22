@@ -1,5 +1,7 @@
 package job.seek.javasort;
 
+import org.junit.Test;
+
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
@@ -21,7 +23,7 @@ import java.util.List;
 public class Sort03 {
 
     public static void main(String[] args) {
-        int arr[] = {7, 5, 3, 2, 4,3,6,10,123,0};
+        int arr[] = {7, 5, 3, 2, 4, 3, 6, 10, 123, 0};
 //        List<Integer> list = new ArrayList<>();
 //        for (int i = 0; i < 9999; i++) {
 //            list.add((int)(Math.random()*9999)+1);
@@ -51,6 +53,21 @@ public class Sort03 {
         System.out.println("耗费时间minutes：" + minutes);
         System.out.println(Arrays.toString(arr));
 //        Arrays.stream(arr).forEach(System.out::println);
+    }
+
+    @Test
+    public void sort03() {
+        Integer[] arr = {54, 11, 2, 8, 5, 21};
+        for (int i = 1; i < arr.length; i++) {
+            for (int j = i; j > 0; j--) {
+                if (arr[j] < arr[j - 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j - 1];
+                    arr[j - 1] = temp;
+                }
+            }
+        }
+        System.out.println(Arrays.toString(arr));
     }
 
 }

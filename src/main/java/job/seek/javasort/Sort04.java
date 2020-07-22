@@ -38,7 +38,7 @@ public class Sort04 {
             //循环处理区间中的元素值，相当于冒泡排序的外层循环
             for (int j = i; j < arr.length; j++) {
                 //j控制无序端的起始位置
-                //相当于冒泡排序的内层循环
+                //相当于插入排序的内层循环
                 //这里i代表当前分区数组的默认起点
                 for (int k = j; k > 0 && k - i >= 0; k -= i) {
                     if (arr[k] < arr[k - 1]) {
@@ -68,28 +68,25 @@ public class Sort04 {
 
     @Test
     public void sort() {
-        int arr[] = {6, 5, 3, 2, 4, 14};
-        //数组分区
+        int arr[] = {7, 5, 3, 2, 4, 3, 6, 10, 123, 0};
         for (int i = arr.length / 2; i > 0; i /= 2) {
-            //仿冒泡排序机制
             for (int j = i; j < arr.length; j++) {
-                //这里i代表当前分区数组的起始位置
-                //k - i >= 0 为了保证不越界
                 for (int k = j; k > 0 && k - i >= 0; k -= i) {
                     if (arr[k] < arr[k - 1]) {
-                        int temp = arr[k - 1];
-                        arr[k - 1] = arr[k];
-                        arr[k] = temp;
+                        int temp = arr[k];
+                        arr[k] = arr[k - 1];
+                        arr[k - 1] = temp;
                     }
                 }
             }
         }
+        //数组分区
         System.out.println(Arrays.toString(arr));
     }
 
     @Test
     public void sort02() {
-        System.out.println(1/2);
+        System.out.println(1 / 2);
     }
 
 }
