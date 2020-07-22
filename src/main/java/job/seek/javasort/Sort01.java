@@ -24,7 +24,7 @@ public class Sort01 {
 //        }
 //        Integer[] arr = list.toArray(new Integer[]{});
         Instant fromDate = Instant.now();
-        //外层循环，遍历次数
+        //外层循环，遍历次数，操作步长
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr.length - i - 1; j++) {
                 //内层循环，升序（如果前一个值比后一个值大，则交换）

@@ -34,8 +34,8 @@ public class WeakReferenceTest {
 
         // 检查关联的引用队列是否为空
         Reference<? extends GCTarget> reference;
-        while((reference = REFERENCE_QUEUE.poll()) != null) {
-            if(reference instanceof GCTargetWeakReference) {
+        while ((reference = REFERENCE_QUEUE.poll()) != null) {
+            if (reference instanceof GCTargetWeakReference) {
                 System.out.println("In queue, id is: " +
                         ((GCTargetWeakReference) (reference)).id);
             }

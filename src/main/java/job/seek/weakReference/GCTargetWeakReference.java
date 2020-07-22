@@ -3,6 +3,9 @@ package job.seek.weakReference;
 import java.lang.ref.ReferenceQueue;
 import java.lang.ref.WeakReference;
 
+/**
+ * @author Yiuahm
+ */
 public class GCTargetWeakReference extends WeakReference<GCTarget> {
     // 弱引用的ID
     public String id;
