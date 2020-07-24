@@ -3,6 +3,11 @@ package job.javabBse;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+
 /**
  * @author Yiuahm
  * 前期绑定，后期绑定
@@ -38,11 +43,29 @@ public class Student {
         Student student = new Student();
         Student tom1 = student.init(23, "Tom");
     }
+
+
 }
 
 class Test01{
     public static void main(String[] args) {
         Student student = new Student();
 //        Student tom1 = student.init(23, "Tom");
+        System.out.println(hash("sdfsdfsdff"));
+
+
+        List<String> list = new ArrayList<>();
+        Iterator<String> it = list. iterator();
+        while(it. hasNext()){
+            String obj = it. next();
+            System. out. println(obj);
+        }
+
     }
+
+    static final int hash(Object key) {
+        int h;
+        return (key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16);
+    }
+
 }
