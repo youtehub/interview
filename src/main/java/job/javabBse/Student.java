@@ -26,7 +26,7 @@ public class Student {
         this.name = name;
     }
 
-    private Student init(int age, String name){
+    private Student init(int age, String name) {
         return new Student(age, name);
     }
 
@@ -39,26 +39,37 @@ public class Student {
     }
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Student student = new Student();
         Student tom1 = student.init(23, "Tom");
+
+        Thread thread = new Thread();
+//        thread.sleep(100);
+        Thread.sleep(100);
+    }
+
+    @Test
+    public void testRole() {
+        int aa = 11;
+        int dd = 22;
+        System.out.println(aa + dd);
     }
 
 
 }
 
-class Test01{
+class Test01 {
     public static void main(String[] args) {
         Student student = new Student();
 //        Student tom1 = student.init(23, "Tom");
         System.out.println(hash("sdfsdfsdff"));
-
+        Thread.yield();
 
         List<String> list = new ArrayList<>();
-        Iterator<String> it = list. iterator();
-        while(it. hasNext()){
-            String obj = it. next();
-            System. out. println(obj);
+        Iterator<String> it = list.iterator();
+        while (it.hasNext()) {
+            String obj = it.next();
+            System.out.println(obj);
         }
 
     }
