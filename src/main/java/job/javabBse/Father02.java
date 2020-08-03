@@ -38,12 +38,22 @@ public class Father02 {
         List checkedList = Collections.checkedList(list, type);
         checkedList.add("hello");
         checkedList.add("hello");
-        checkedList.add(12);
         System.out.println(checkedList);
         //输出结果:[123, 0, hello]
+
+
+        Thread t1 = new Thread(new TestThread01());
+        t1.start();
 
 
     }
 
 }
 
+class TestThread01 implements Runnable{
+    @Override
+    public void run() {
+        Thread t2 = new Thread();
+        t2.start();
+    }
+}
