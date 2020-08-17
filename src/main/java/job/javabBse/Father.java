@@ -106,6 +106,7 @@ class Son extends Father {
         String msg = "调用的属性:" + son.getName();
         System.out.println(msg);
         Son.introduce();
+
     }
 
 }
