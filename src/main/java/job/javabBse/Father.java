@@ -57,7 +57,7 @@ public class Father {
 class Son extends Father {
     protected String name = "儿子属性";
 
-    public static final Integer number = 3;
+    public static final Integer NUMBER = 3;
 
     public static List<Long> dd = new ArrayList<>();
 
