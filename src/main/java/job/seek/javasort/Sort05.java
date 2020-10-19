@@ -1,5 +1,8 @@
 package job.seek.javasort;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 快速排序
  * 　a、确认列表第一个数据为中间值，第一个值看成空缺（低指针空缺）。
@@ -83,4 +86,6 @@ public class Sort05 {
         quickSort(arr, start, low - 1);
         quickSort(arr, low + 1, end);
     }
+
+
 }

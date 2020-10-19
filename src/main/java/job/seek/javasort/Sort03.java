@@ -40,9 +40,6 @@ public class Sort03 {
                     int temp = arr[j - 1];
                     arr[j - 1] = arr[j];
                     arr[j] = temp;
-                } else {
-                    //如果不小于，说明插入完毕，退出内层循环
-                    break;
                 }
             }
         }
