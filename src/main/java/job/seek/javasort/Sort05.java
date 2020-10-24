@@ -1,5 +1,7 @@
 package job.seek.javasort;
 
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -87,5 +89,16 @@ public class Sort05 {
         quickSort(arr, low + 1, end);
     }
 
+
+    @Test
+    public void testExponent(){
+        int value = 16384;
+        int index = 1;
+        while (value > 2){
+            index++;
+            value = value / 2;
+        }
+        System.out.println("指数值是： "+index);
+    }
 
 }
